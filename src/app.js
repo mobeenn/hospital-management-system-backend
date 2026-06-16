@@ -5,6 +5,17 @@ const app = express();
 
 app.use(cors());
 
+const allowedOrigins = [
+   "https://hospital-management-system-frontend-lime.vercel.app",
+   "http://localhost:3000",
+];
+app.use(
+   cors({
+      origin: allowedOrigins,
+      credentials: true,
+   }),
+);
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
