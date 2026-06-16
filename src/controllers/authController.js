@@ -1,8 +1,9 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-
+const mongoose = require("mongoose");
 const login = async (req, res) => {
+   console.log("Mongo Ready State:", mongoose.connection.readyState);
    try {
       const { email, password } = req.body;
 
