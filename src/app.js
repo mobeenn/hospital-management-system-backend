@@ -17,6 +17,7 @@ app.use(
 
 app.use(express.json());
 
+// MongoDB Connection Status Endpoint
 app.get("/db-status", (req, res) => {
    res.json({
       readyState: mongoose.connection.readyState,
