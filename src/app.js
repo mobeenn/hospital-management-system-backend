@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
+const mongoose = require("mongoose");
 const app = express();
 
 app.use(cors());
@@ -16,6 +16,12 @@ app.use(
 );
 
 app.use(express.json());
+
+app.get("/db-status", (req, res) => {
+   res.json({
+      readyState: mongoose.connection.readyState,
+   });
+});
 
 app.get("/", (req, res) => {
    res.send("Hospital API Running");
