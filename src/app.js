@@ -9,10 +9,10 @@ const dns = require("dns");
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 connectDB();
-// app.use(cors());
+app.use(cors());
 
 const allowedOrigins = [
-   "https://hospital-management-system-frontend-lime.vercel.app",
+   "https://hospital-management-system-frontend-lime.vercel.app/",
 ];
 app.use(
    cors({
