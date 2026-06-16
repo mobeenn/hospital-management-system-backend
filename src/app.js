@@ -3,6 +3,12 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const app = express();
 
+const connectDB = require("../src/config/db");
+
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
+connectDB();
 // app.use(cors());
 
 const allowedOrigins = [
