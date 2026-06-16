@@ -6,8 +6,7 @@ const app = express();
 app.use(cors());
 
 const allowedOrigins = [
-   "https://hospital-management-system-frontend-lime.vercel.app",
-   "http://localhost:3000",
+   "https://hospital-management-system-frontend-lime.vercel.app/",
 ];
 app.use(
    cors({
