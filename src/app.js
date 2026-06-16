@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
 const allowedOrigins = [
    "https://hospital-management-system-frontend-lime.vercel.app",
